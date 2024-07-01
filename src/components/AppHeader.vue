@@ -13,8 +13,8 @@ export default {
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link active" aria-current="page" href="#">Projects</a>
+        <router-link :to="{ name: 'home' }" class="nav-link active" aria-current="page" href="#">Home</router-link>
+        <router-link :to="{ name: 'projects' }" class="nav-link active" aria-current="page" href="#">Projects</router-link>
       </div>
     </div>
   </div>
