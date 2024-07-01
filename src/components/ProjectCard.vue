@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-    <div class="card h-100">
+    <router-link :to="{ name: 'single-project', params: { slug: project.slug } }" class="card text-decoration-none h-100">
         <div class="card-body">
             <h4> Titolo :
                 {{ project.title }}
@@ -20,5 +20,5 @@ export default {
                 {{ project.type ? project.type.name : "nessuna tipologia applicata" }}
             </p>
         </div>
-    </div>
+    </router-link>
 </template>
