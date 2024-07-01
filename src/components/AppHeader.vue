@@ -11,6 +11,10 @@ export default {
                     routeName: "projects",
                     title: "Projects Page",
                 },
+                {
+                    routeName: "about",
+                    title: "About Page",
+                },
             ]
         }
     }
