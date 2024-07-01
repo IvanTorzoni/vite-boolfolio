@@ -1,13 +1,14 @@
 <script>
-import AppMain from "./pages/ProjectPage.vue";
+import AppHeader from "./components/AppHeader.vue"
 export default {
   components: {
-    AppMain
+    AppHeader,
   }
 }
 </script>
 
 <template>
+  <AppHeader />
   <router-view></router-view>
 </template>
 
