@@ -1,5 +1,5 @@
 <script>
-import AppMain from "./components/AppMain.vue";
+import AppMain from "./pages/ProjectPage.vue";
 export default {
   components: {
     AppMain
@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <AppMain />
+  <router-view></router-view>
 </template>
 
 <style lang="scss"></style>
