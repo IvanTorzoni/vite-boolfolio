@@ -21,7 +21,15 @@ export default {
         <div class="container card" v-if="project !== null">
             <h1> {{ project.title }} </h1>
             <p> {{ project.description }} </p>
+            <div>
+                Technologie applicate:
+            </div>
+            <p v-if="project.technologies.length > 0">
             <p v-for="technology in project.technologies">{{ technology.name }}</p>
+            </p>
+            <p v-else>
+                Nessuna tecnologia usata
+            </p>
             <p> Tipologia del progetto:
                 {{ project.type ? project.type.name : "nessuna tipologia applicata" }}
             </p>
