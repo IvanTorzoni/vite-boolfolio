@@ -1,6 +1,19 @@
 <script>
 export default {
-
+    data() {
+        return {
+            navLinks: [
+                {
+                    routeName: "home",
+                    title: "Home",
+                },
+                {
+                    routeName: "projects",
+                    title: "Projects Page",
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -12,9 +25,8 @@ export default {
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <router-link :to="{ name: 'home' }" class="nav-link active" aria-current="page" href="#">Home</router-link>
-        <router-link :to="{ name: 'projects' }" class="nav-link active" aria-current="page" href="#">Projects</router-link>
+      <div class="navbar-nav" v-for="link in navLinks">
+        <router-link :to="{ name: link.routeName }" class="nav-link active" aria-current="page" href="#"> {{ link.title }}</router-link>
       </div>
     </div>
   </div>
