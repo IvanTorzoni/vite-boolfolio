@@ -8,10 +8,17 @@ export default {
     },
     created() {
         const slug = this.$route.params.slug;
-        axios.get(`http://127.0.0.1:8000/api/projects/${slug}`).then((resp) => {
+        axios
+        .get(`http://127.0.0.1:8000/api/projects/${slug}`)
+        .then((resp) => {
             this.project = resp.data.result;
-            console.log(resp);
-        });
+            // console.log(resp);
+        })
+        .catch((err => {
+            if (err.response.status === 404) {
+                this.$router.push({ name: "not-found"});
+            }
+        }));
     },
 };
 </script>

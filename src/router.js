@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage.vue";
 import ProjectPage from "./pages/ProjectPage.vue";
 import AboutPage from "./pages/AboutPage.vue";
 import DetailPage from "./pages/DetailPage.vue";
+import ErrorPage404 from "./pages/ErrorPage404.vue";
 
 
 const router = createRouter({
@@ -27,6 +28,11 @@ const router = createRouter({
             path: "/projects/:slug",
             name: "single-project",
             component: DetailPage,
+        },
+        {
+            path: "/:pathMatch(.*)*",
+            name: "not-found",
+            component: ErrorPage404,
         },
     ],
 });
